@@ -1,0 +1,265 @@
+/* Estilos base */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: rgb(255, 0, 0);
+}
+
+.link-active {
+  color: rgb(255, 0, 0);
+}
+
+/* Barra de navegación */
+.nav-bar {
+  margin: 0;
+  position: relative;
+}
+
+.list {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+  gap: 30px;
+  padding: 20px;
+  margin: 0 0 20px 0;
+  background: linear-gradient(to left, #daf0ffb9, #c2e0ff, #a3ceff);
+}
+
+/* Contenedores principales */
+.title {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.pres-container,
+.tarifas-container,
+.presencial,
+.virtual {
+  background-color: #f8fcff;
+  box-shadow: 0 4px 12px rgba(0, 98, 179, 0.1);
+  backdrop-filter: blur(5px);
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 12px;
+  line-height: 1.6;
+}
+
+.presencial,
+.virtual {
+  max-width: 1000px;
+  background-color: #f8fcff;
+  box-shadow: 0 4px 12px rgba(0, 98, 179, 0.1);
+}
+
+/* Textos */
+.presentacion,
+.text-clases,
+.contact-text {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* Sección de tarifas */
+.tarifas-container {
+  max-width: 600px;
+  min-height: 400px;
+  background-color: #f8fcff;
+  box-shadow: 0 4px 12px rgba(0, 98, 179, 0.1);
+}
+
+.tarifas-titulo {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.tarifas-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tarifas-lista li {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.1rem;
+}
+
+/* Sección de contacto */
+.contacto-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.contacto-subtitle::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #a3ceff, #c2e0ff);
+  margin: 0.5rem auto 0;
+}
+
+.lista-contacto {
+  list-style: none;
+  padding: 0;
+  margin: 5% auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 50%;
+}
+
+.contact-text {
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin: 0 auto 0 25%;
+}
+
+.contacto-link a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.contacto-link a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  color: rgb(255, 0, 0);
+}
+
+/* Media Queries para responsive */
+@media (max-width: 1024px) {
+  .list {
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .lista-contacto {
+    width: 70%;
+  }
+
+  .contact-text {
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .list {
+    justify-content: center;
+    font-size: 18px;
+    gap: 40px;
+  }
+
+  .pres-container,
+  .tarifas-container,
+  .presencial,
+  .virtual {
+    padding: 1.5rem;
+  }
+
+  .presentacion,
+  .text-clases {
+    font-size: 18px;
+  }
+
+  .tarifas-lista li {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .lista-contacto {
+    width: 80%;
+  }
+
+  .contact-text {
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .list {
+    font-size: 16px;
+    gap: 10px;
+    padding: 15px 10px;
+  }
+
+  .pres-container,
+  .tarifas-container {
+    padding: 1rem;
+  }
+
+  .presentacion,
+  .text-clases {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .consulta {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  .clases-container {
+    margin-top: 40px;
+    gap: 30px;
+  }
+
+  .lista-contacto {
+    width: 90%;
+  }
+
+  .contact-text {
+    margin-left: 5%;
+  }
+
+  .contacto-link a {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
