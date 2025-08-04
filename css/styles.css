@@ -66,6 +66,7 @@ a:hover {
   max-width: 1200px;
   border-radius: 12px;
   line-height: 1.6;
+  text-align: center;
 }
 
 .presencial,
@@ -263,3 +264,4 @@ a:hover {
     gap: 0.5rem;
   }
 }
+
